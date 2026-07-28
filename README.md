@@ -53,6 +53,38 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
  <li>Find its Successors Or neighbors and Check whether the node is visited or not</li>
  <li>If Not Visited, add it to the STACK. Else Call The Function Again Until No more nodes needs to be visited.</li>
 </ol></B>
+## PROGRAM
+
+
+```
+from collections import defaultdict
+
+def dfs(graph, start, visited, path):
+    path.append(start)
+    visited[start] = True
+
+    for neighbour in graph[start]:
+        if not visited[neighbour]:
+            dfs(graph, neighbour, visited, path)
+
+    return path
+
+graph = defaultdict(list)
+
+n, e = map(int, input().split())
+
+for i in range(e):
+    u, v = input().split()
+    graph[u].append(v)
+    graph[v].append(u)
+
+start = "A"
+visited = defaultdict(bool)
+path = []
+
+traversedpath = dfs(graph, start, visited, path)
+print(traversedpath)
+```
 
 <hr>
 <h3>Sample Input</h3>
@@ -73,6 +105,9 @@ F H <BR>
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
 
 <hr>
+##EXECUTION:
+<img width="574" height="354" alt="image" src="https://github.com/user-attachments/assets/3d153ebf-a2a7-4c48-a0ce-8b57ee2b702f" />
+
 
 <hr>
 <h3>Sample Input</h3>
@@ -89,6 +124,9 @@ F H <BR>
 ['0', '1', '2', '3', '4']
 
 <hr>
+##EXECUTION
+<img width="471" height="274" alt="image" src="https://github.com/user-attachments/assets/d0183aeb-6c1e-4c24-b464-7c25fcd8de6d" />
+
 <h3>Result:</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
