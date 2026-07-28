@@ -104,11 +104,14 @@ F H <BR>
 <hr>
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
 
-<hr>
+
 EXECUTION:
 
 
 <img width="574" height="354" alt="image" src="https://github.com/user-attachments/assets/3d153ebf-a2a7-4c48-a0ce-8b57ee2b702f" />
+
+<hr>
+
 
 
 <hr>
@@ -124,12 +127,14 @@ EXECUTION:
 <h3>Sample Output</h3>
 <hr>
 ['0', '1', '2', '3', '4']
-
-<hr>
 EXECUTION:
 
 
 <img width="471" height="274" alt="image" src="https://github.com/user-attachments/assets/d0183aeb-6c1e-4c24-b464-7c25fcd8de6d" />
+
+
+<hr>
+
 
 <h3>Result:</h3>
 <hr>
